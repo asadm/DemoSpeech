@@ -21,27 +21,127 @@
 
 <body>
 	<div id="viz">
-		<div id="viz2">
-			<canvas id="analyser" width="1600" height="500"></canvas>
-		</div>
 		<div id="viz3">
-			<canvas id="spectrogram" width="1600" height="500"></canvas>
+			<canvas id="spectrogram" width="1600" height="300"></canvas>
 		</div>
 		<div id="viz4">
 			<!-- <canvas id="wavedisplay" width="1600" height="500"></canvas> -->
 			<h1>Positive Personality Traits</h1>
 			<h2>Scale: 0-100</h2>
 			<div id="chartForBar"></div>
+			<h1>Negative Personality Traits</h1>
+			<h2>Scale: 0-100</h2>
+			<div id="chartForBar2"></div>
 		</div>
-		<!--<div id="viz4">
-				<canvas id="voicequality" width="1600" height="500"></canvas>
-			</div> -->
 	</div>
-	<!--
-	<div id="viz2" class="200x160px">
-	</div>
-	<div id="viz3" class="200x160px">
-	</div>-->
+		<!--
+		<div id="viz2">
+			<canvas id="analyser" width="1600" height="300"></canvas>
+			
+		</div>
+		-->
+	
+		<!--
+		<div id="llf" width="1600" height="500">
+	        <div  style="float:left">
+	            <h4 style="color:white">Aphonic</h4>
+	            <svg id="fillgauge2" width="70%" height="70%" onclick="gauge2.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Biphonic</h4>
+	            <svg id="fillgauge3" width="70%" height="70%" onclick="gauge3.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Breathy</h4>
+	            <svg id="fillgauge4" width="70%" height="70%" onclick="gauge4.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Covered</h4>
+	            <svg id="fillgauge5" width="70%" height="70%" onclick="gauge5.update(NewValue());"></svg>
+	        </div>
+	         <div  style="float:left">
+	            <h4 style="color:white">Creaky</h4>
+	            <svg id="fillgauge6" width="70%" height="70%" onclick="gauge6.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Diplophonic</h4>
+	            <svg id="fillgauge7" width="70%" height="70%" onclick="gauge7.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Flutter</h4>
+	            <svg id="fillgauge8" width="70%" height="70%" onclick="gauge8.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Glottalized</h4>
+	            <svg id="fillgauge9" width="70%" height="70%" onclick="gauge9.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Hoarse/Raspy</h4>
+	            <svg id="fillgauge10" width="70%" height="70%" onclick="gauge10.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Honky</h4>
+	            <svg id="fillgauge11" width="70%" height="70%" onclick="gauge11.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Jitter</h4>
+	            <svg id="fillgauge12" width="70%" height="70%" onclick="gauge12.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Nasal</h4>
+	            <svg id="fillgauge13" width="70%" height="70%" onclick="gauge13.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Pressed</h4>
+	            <svg id="fillgauge14" width="70%" height="70%" onclick="gauge14.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Pulsed</h4>
+	            <svg id="fillgauge15" width="70%" height="70%" onclick="gauge15.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Resonant</h4>
+	            <svg id="fillgauge16" width="70%" height="70%" onclick="gauge16.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Rough</h4>
+	            <svg id="fillgauge17" width="70%" height="70%" onclick="gauge17.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Shimmer</h4>
+	            <svg id="fillgauge18" width="70%" height="70%" onclick="gauge18.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Strained</h4>
+	            <svg id="fillgauge19" width="70%" height="70%" onclick="gauge19.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Strohbass</h4>
+	            <svg id="fillgauge20" width="70%" height="70%" onclick="gauge20.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Tremerous</h4>
+	            <svg id="fillgauge21" width="70%" height="70%" onclick="gauge21.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Twangy</h4>
+	            <svg id="fillgauge22" width="70%" height="70%" onclick="gauge22.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Ventricular</h4>
+	            <svg id="fillgauge23" width="70%" height="70%" onclick="gauge23.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Wobble</h4>
+	            <svg id="fillgauge24" width="70%" height="70%" onclick="gauge24.update(NewValue());"></svg>
+	        </div>
+	        <div  style="float:left">
+	            <h4 style="color:white">Yawny</h4>
+	            <svg id="fillgauge25" width="70%" height="70%" onclick="gauge25.update(NewValue());"></svg>
+	        </div>
+	    </div>
+	    -->
+	
 	<div id="controls">
 		<a id="save"><img src="img/analyse.png"></a>
 		<img id="record" src="img/mic128.png" onclick="toggleRecording(this);">
@@ -57,6 +157,7 @@
 
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="updatingBarChart.js"></script>
+	<script src="js/LiquidFillGauge.js" language="JavaScript"></script>
 	<script src="js/main.js"></script>
 </body>
 

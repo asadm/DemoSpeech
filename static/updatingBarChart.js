@@ -101,7 +101,7 @@ var redrawChart = function(settings, newdata) {
 	//Update bar widths
 	chartRow.select(".bar").transition()
 	  .duration(300)
-	  .attr("width", function(d) { return x(d.value);})
+	  .attr("width", function(d) { return x(d.value/5);})
 	  .attr("opacity",1);
 
 	//Update data labels

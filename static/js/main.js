@@ -68,11 +68,13 @@
           // Enter a speed between 0 and 180
           start = false; //that means there is no speech
           redraw(settings);
+          redraw(settings2);
           //redrawChart(settings, data)
         }
         else{
           start = true;
           redraw(settings);
+          redraw(settings2);
         }
 
       });
@@ -106,7 +108,7 @@
             audioRecorder.record();
           }
           recording = true;
-        }, 5000)
+        }, 7000)
         
       }
     }
@@ -125,7 +127,7 @@
       window.cancelAnimationFrame( rafID );
       rafID = null;
     }
-
+    /*
     function updateAnalysers(time) {
       if (!analyserContext) {
         var canvas = document.getElementById("analyser");
@@ -163,7 +165,7 @@
         }
 
         rafID = window.requestAnimationFrame( updateAnalysers );
-      }
+      }*/
 
       function toggleMono() {
         if (audioInput != realAudioInput) {
@@ -198,7 +200,7 @@ zeroGain = audioContext.createGain();
 zeroGain.gain.value = 0.0;
 inputPoint.connect( zeroGain );
 zeroGain.connect( audioContext.destination );
-updateAnalysers();
+//updateAnalysers();
 handleMicStream(stream);
     //setInterval(function(){ gotBuffers(stream)}, 3000);
   }
@@ -272,6 +274,7 @@ handleMicStream(stream);
   }
 
   var settings
+  var settings2
 
   function initAudio() {
     if (!navigator.getUserMedia)
@@ -297,7 +300,50 @@ handleMicStream(stream);
       console.log(e);
     });
     settings = setup('#chartForBar');
-    redraw(settings)
+    settings2 = setup('#chartForBar2');
+    redraw(settings);
+    redraw(settings2);
+    /*
+    var config1 = liquidFillGaugeDefaultSettings();
+        config1.circleColor = "#FF7777";
+        config1.textColor = "#FF4444";
+        config1.waveTextColor = "#FFAAAA";
+        config1.waveColor = "#FFDDDD";
+        config1.circleThickness = 0.2;
+        config1.textVertPosition = 0.2;
+        config1.waveAnimateTime = 1000;
+        var gauge2= loadLiquidFillGauge("fillgauge2", Math.random()*100, config1);
+        var gauge3= loadLiquidFillGauge("fillgauge3", Math.random()*100, config1);
+        var gauge4= loadLiquidFillGauge("fillgauge4", Math.random()*100, config1);
+        var gauge5= loadLiquidFillGauge("fillgauge5", Math.random()*100, config1);
+        var gauge6= loadLiquidFillGauge("fillgauge6", Math.random()*100, config1);
+        var gauge7= loadLiquidFillGauge("fillgauge7", Math.random()*100, config1);
+        var gauge8= loadLiquidFillGauge("fillgauge8", Math.random()*100, config1);
+        var gauge9= loadLiquidFillGauge("fillgauge9", Math.random()*100, config1);
+        var gauge10= loadLiquidFillGauge("fillgauge10", Math.random()*100, config1);
+        var gauge11= loadLiquidFillGauge("fillgauge11", Math.random()*100, config1);
+        var gauge12= loadLiquidFillGauge("fillgauge12", Math.random()*100, config1);
+        var gauge13= loadLiquidFillGauge("fillgauge13", Math.random()*100, config1);
+        var gauge14= loadLiquidFillGauge("fillgauge14", Math.random()*100, config1);
+        var gauge15= loadLiquidFillGauge("fillgauge15", Math.random()*100, config1);
+        var gauge16= loadLiquidFillGauge("fillgauge16", Math.random()*100, config1);
+        var gauge17= loadLiquidFillGauge("fillgauge17", Math.random()*100, config1);
+        var gauge18= loadLiquidFillGauge("fillgauge18", Math.random()*100, config1);
+        var gauge19= loadLiquidFillGauge("fillgauge19", Math.random()*100, config1);
+        var gauge20= loadLiquidFillGauge("fillgauge20", Math.random()*100, config1);
+        var gauge21= loadLiquidFillGauge("fillgauge21", Math.random()*100, config1);
+        var gauge22= loadLiquidFillGauge("fillgauge22", Math.random()*100, config1);
+        var gauge23= loadLiquidFillGauge("fillgauge23", Math.random()*100, config1);
+        var gauge24= loadLiquidFillGauge("fillgauge24", Math.random()*100, config1);
+        var gauge25= loadLiquidFillGauge("fillgauge25", Math.random()*100, config1);
+        function NewValue(){
+            if(Math.random() > .5){
+                return Math.round(Math.random()*100);
+            } else {
+                return (Math.random()*100).toFixed(1);
+            }
+        }
+      */
     init();
     /*
     g = new JustGage({

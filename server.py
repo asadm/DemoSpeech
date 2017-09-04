@@ -54,7 +54,7 @@ def upload_file():
       #return 'Your predicted Gender = ' + str(random.randint(20,45))
 
 if __name__ == '__main__':
-  #app.run("0.0.0.0")
-  app.run()
+  app.run("0.0.0.0")
+  #app.run()
 
   
