@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>CMU Human Profiling Demo</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 crossorigin="anonymous">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+
+	<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.2.9/justgage.js"></script>
+
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="viz">
+		<div id="viz2">
+			<canvas id="analyser" width="1600" height="500"></canvas>
+		</div>
+		<div id="viz3">
+			<canvas id="spectrogram" width="1600" height="500"></canvas>
+		</div>
+		<div id="viz4">
+			<!-- <canvas id="wavedisplay" width="1600" height="500"></canvas> -->
+			<h1>Positive Personality Traits</h1>
+			<h2>Scale: 0-100</h2>
+			<div id="chartForBar"></div>
+		</div>
+		<!--<div id="viz4">
+				<canvas id="voicequality" width="1600" height="500"></canvas>
+			</div> -->
+	</div>
+	<!--
+	<div id="viz2" class="200x160px">
+	</div>
+	<div id="viz3" class="200x160px">
+	</div>-->
+	<div id="controls">
+		<a id="save"><img src="img/analyse.png"></a>
+		<img id="record" src="img/mic128.png" onclick="toggleRecording(this);">
+	</div>
+
+	<script src="js/recorderjs/recorder.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/audiodisplay.js"></script>
+
+	<script src="scripts/audiobuffer-slice.js"></script>
+	<script src="scripts/vendor/chroma.js"></script>
+	<script src="spectrogram.js"></script>
+
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="updatingBarChart.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
