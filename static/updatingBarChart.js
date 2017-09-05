@@ -149,8 +149,8 @@ var redrawChart = function(settings, newdata) {
 //Pulls data
 //Since our data is fake, adds some random changes to simulate a data stream.
 //Uses a callback because d3.json loading is asynchronous
-var pullData = function(settings,callback){
-	d3.json("fakeData.json", function (err, data){
+var pullData = function(settings,callback,fakeDataFile){
+	d3.json(fakeDataFile, function (err, data){
 		if (err) return console.warn(err);
 
 		var newData = data;
@@ -167,22 +167,25 @@ var pullData = function(settings,callback){
 			newData[i].value = newValue <= 0 ? 100 : newValue
 			})
 		}
-		//newData = formatData(newData);
+		if(fakeDataFile == "fakeData2.json"){
+			newData = formatData(newData);
+		}
+		
 
 		callback(settings,newData);
 	})
 }
 
 //Sort data in descending order and take the top 10 values
-/*
+
 var formatData = function(data){
     return data.sort(function (a, b) {
         return b.value - a.value;
       })
-	  .slice(0, 10);
+	  .slice(0, 22);
 }
-*/
+
 //I like to call it what it does
-var redraw = function(settings){
-	pullData(settings,redrawChart)
-}
+var redraw = function(settings,fakeDataFile){
+	pullData(settings,redrawChart,fakeDataFile);
+	}

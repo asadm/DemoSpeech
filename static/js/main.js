@@ -67,14 +67,16 @@
         if(data == "True"){
           // Enter a speed between 0 and 180
           start = false; //that means there is no speech
-          redraw(settings);
-          redraw(settings2);
+          redraw(settings,"fakeData.json");
+          redraw(settings2,"fakeData3.json");
+          redraw(settings3,"fakeData2.json");
           //redrawChart(settings, data)
         }
         else{
           start = true;
-          redraw(settings);
-          redraw(settings2);
+          redraw(settings,"fakeData.json");
+          redraw(settings2,"fakeData3.json");
+          redraw(settings3,"fakeData2.json");
         }
 
       });
@@ -301,8 +303,10 @@ handleMicStream(stream);
     });
     settings = setup('#chartForBar');
     settings2 = setup('#chartForBar2');
-    redraw(settings);
-    redraw(settings2);
+    settings3 = setup('#chartForBar3')
+    redraw(settings,"fakeData.json");
+    redraw(settings2,"fakeData3.json");
+    redraw(settings3,"fakeData2.json");
     /*
     var config1 = liquidFillGaugeDefaultSettings();
         config1.circleColor = "#FF7777";
@@ -380,7 +384,9 @@ function init() {
       enable: true
     },
     colors: function(steps) {
-      var baseColors = [[32,32,32,0], [0,255,255,1], [0,255,0,1], [255,255,0,1], [ 255,0,0,1]];
+      //var baseColors = [[32,32,32,0], [0,255,255,1], [0,255,0,1], [255,255,0,1], [ 255,0,0,1]];
+      //var baseColors = [[32,32,32,0], [32,32,32,0], [32,32,32,0], [32,32,32,0], [ 255,0,0,1]];
+      var baseColors = [[0,0,0,0], [0,0,0,0], [0,0,0,0], [0,0,0,0], [ 255,0,0,1]];
       var positions = [0, 0.15, 0.30, 0.50, 0.75];
 
       var scale = new chroma.scale(baseColors, positions)

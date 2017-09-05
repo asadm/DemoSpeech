@@ -1,14 +1,22 @@
 
 
 h1 {
-	font-size:150%;
+	font-size:100%;
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 300;
+   font-weight: 100;
 	text-align: left;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
 h2 {
+	font-size: 12px;
+	font-style: italic;
+	color: gray;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+h4 {
 	font-size: 12px;
 	font-style: italic;
 	color: gray;
@@ -23,12 +31,19 @@ h2 {
             overflow-x: auto;
         }
 */
-#chartForBar,#chartForBar2{
-	width:100%;
-	height:1000px;
-	overflow-y: auto;
-	display: inline-flex;
+#chartForBar{
+	width:25%;
+	float:left;
 }
+#chartForBar2{
+	width:25%;
+	float:left;
+}
+#chartForBar3{
+	width:25%;
+	float:left;
+}
+
 .bar{
 	fill:#444444;
 }
@@ -92,8 +107,8 @@ canvas {
 	align-items: center;
 	overflow-y: auto;
 }
-#viz2,#viz3,#viz5 {
-	height: 50%;
+#viz2,#viz3{
+	height: 30%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -102,11 +117,21 @@ canvas {
 	background: #202020;
 }
 
-#viz4 {
-	/* height: 80%; */
+#viz5 {
+	height: 30%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
+	align-items: left;
+	background: #202020;
+}
+
+#viz4 {
+	height: 60%;
+	width: 100%;
+	display: flex;
+	/*flex-direction: column;*/
 	justify-content: space-around;
 	align-items: left;
 	background: #202020;
